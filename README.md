@@ -2,7 +2,7 @@ This is a result of trying to use Pipedrive API with React.
 
 The app shows basic information about persons.
 
-##Setup
+## Setup
 Install depndencies
 ```bash
 npm install
@@ -12,7 +12,7 @@ run project
 npm start
 ```
 
-##Person custom fields
+## Person custom fields
 
 In order to ger required data Person Object has some extra custom fields:
 * location - Address
