@@ -1,0 +1,12 @@
+.contact-field td {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: .8em;
+    font-size: 14px;
+}
+
+.contact-field td:first-child {
+    color: #6a6a6a;
+    font-weight: 600;
+    text-align: right;
+}

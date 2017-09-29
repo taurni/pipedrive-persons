@@ -1,0 +1,13 @@
+.person-details__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.person-details__main {
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
