@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import PersonList from '../PersonList';
-import Search from '../Search';
 import { IconPipedrive } from '../Icon';
 
 class App extends Component {
@@ -16,10 +15,9 @@ class App extends Component {
                 </div>
                 <div className="app__content app__content--header">
                     <h1 className="app__page-title">People's List</h1>
-                    <Search />
                 </div>
                 <div className="app__content app__content--separator">
-                    <PersonList icon="PIPEDRIVE"/>
+                    <PersonList />
                 </div>
             </div>
         );

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Avatar from '../Avatar/index';
 import ContactField from '../ContactField';
-import { CUSTOMFIELDS } from '../../constants';
+import {CUSTOMFIELDS} from '../../constants';
 import './PersonDetails.css';
 
 class PersonDetails extends Component {
 
-    render (){
-        return(
+    render() {
+        return (
             <div className="person-details">
                 <div className="person-details__header">
                     <Avatar large={true} avatarText={this.props.initials} src={this.props.picture_id}/>
@@ -16,11 +16,13 @@ class PersonDetails extends Component {
                 </div>
                 <div className="person-details__main">
                     <table>
-                        <ContactField label="Email" value={this.props.email[0].value} />
-                        <ContactField label="Organization" value={this.props.org_name} />
-                        <ContactField label="Assistant" value={this.props[CUSTOMFIELDS.ASSISTANT].name} />
-                        <ContactField label="Groups" value={this.props[CUSTOMFIELDS.GROUPS]} />
-                        <ContactField label="Location" value={this.props[CUSTOMFIELDS.LOCATION]} />
+                        <tbody>
+                        <ContactField label="Email" value={this.props.email[0].value}/>
+                        <ContactField label="Organization" value={this.props.org_name}/>
+                        <ContactField label="Assistant" value={this.props[CUSTOMFIELDS.ASSISTANT].name}/>
+                        <ContactField label="Groups" value={this.props[CUSTOMFIELDS.GROUPS]}/>
+                        <ContactField label="Location" value={this.props[CUSTOMFIELDS.LOCATION]}/>
+                        </tbody>
                     </table>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Person from "../Person/index";
+import Person from '../Person/index';
 import {SortableContainer, SortableElement, arrayMove} from 'react-sortable-hoc';
 import { getPersons } from '../utils/apiConnection';
 

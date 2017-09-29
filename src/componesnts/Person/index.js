@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import './Person.css';
-import Avatar from "../Avatar";
+import './Modal.css';
+import Avatar from '../Avatar';
 import ReactModal from 'react-modal';
 import PersonDetails from '../PersonDetails';
-import {IconOfficce} from "../Icon";
-import {IconClose} from "../Icon/index";
+import {IconOfficce} from '../Icon';
+import {IconClose} from '../Icon/index';
 
 ReactModal.setAppElement('#root');
 

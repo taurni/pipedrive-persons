@@ -14,4 +14,3 @@ class ContactField extends Component {
 }
 
 export default ContactField;
-// export default PersonDetails;
