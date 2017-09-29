@@ -14,7 +14,7 @@ npm start
 
 ## Person custom fields
 
-In order to ger required data Person Object has some extra custom fields:
+In order to get required data Person object has some extra custom fields:
 * location - Address
 * assistant - Person
 * groups - String
