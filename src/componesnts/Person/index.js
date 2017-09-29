@@ -13,10 +13,16 @@ class Person extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showModal: false
+            showModal: false,
+            initials: this.makeInitials()
         };
+    }
 
-        this.initials = this.makeInitials();
+    componentWillReceiveProps(newProps){
+        console.log("WRP",newProps,this.makeInitials());
+        this.setState({initials: this.makeInitials()});
+        console.log("WRP",newProps,this.makeInitials());
+
     }
 
     handleOpenModal = () => {
@@ -44,7 +50,7 @@ class Person extends Component {
             <div className="person" onClick={this.handleOpenModal}>
                 <div className="person__data">
                     <p>{this.props.name}</p>
-                    {this.props.org_name !== null &&
+                    {this.props.org_name != null &&
                         <p className="person__office"><IconOfficce /> {this.props.org_name} </p>
                     }
                 </div>

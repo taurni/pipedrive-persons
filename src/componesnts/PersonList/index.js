@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Person from "../Person/index";
 import {SortableContainer, SortableElement, arrayMove} from 'react-sortable-hoc';
-import { getPersons } from '../utils/apiConnection';
 
 const SortableItem = SortableElement(({value}) => <Person {...value} />);
 
@@ -19,16 +18,13 @@ class PersonList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            items: []
+            items: this.props.persons
         };
-        this.fetchPersons();
     }
 
-    fetchPersons = () => {
-        getPersons()
-            .then((persons) => this.setState({items: persons}))
-            .catch((err) => console.log(err));
-    };
+    componentWillReceiveProps(nextProps){
+        this.setState({items: nextProps.persons})
+    }
 
     onSortEnd = ({oldIndex, newIndex}) => {
         this.setState({
@@ -37,7 +33,14 @@ class PersonList extends Component {
     };
 
     render() {
-        return <SortableList items={this.state.items} onSortEnd={this.onSortEnd} distance={3}/>
+        if(this.state.items.length === 0){
+            return(<h3 className="text-center">Didn't find anything.</h3>)
+        }else {
+            return (
+                <SortableList items={this.state.items} onSortEnd={this.onSortEnd} distance={3}/>
+            )
+        }
+
     };
 }
 

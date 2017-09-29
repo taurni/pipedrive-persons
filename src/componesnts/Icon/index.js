@@ -17,7 +17,7 @@ export class IconPipedrive extends Component {
             </svg>
         )
     }
-}
+};
 
 export class IconOfficce extends Component {
     render() {
